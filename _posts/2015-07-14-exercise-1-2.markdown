@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Exercise 1 & 2"
+date: 2015-07-14
+---
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates vero accusamus, dolor facilis cum fugit, delectus architecto totam veniam doloremque quisquam amet dignissimos. A nesciunt alias, tempora recusandae ab quidem?
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptates quaerat atque nobis amet pariatur tempora, cupiditate consectetur aspernatur eos distinctio necessitatibus voluptatum, iure culpa perferendis! Sapiente corrupti fugit distinctio?
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptates suscipit quis nisi fugit laudantium dignissimos nesciunt sit rerum modi quia soluta atque veritatis omnis doloribus, excepturi, exercitationem repellat impedit?
