@@ -234,3 +234,127 @@
         }
     }
 }
+
+// main css
+
+/****************************************
+  Inherited Syles
+*****************************************/
+
+html {
+    box-sizing: border-box;
+    color: white;
+    font: 12pt 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+/****************************************
+    Main layout
+*****************************************/
+
+.panel > div {
+    width: 960px;
+    margin: auto;
+}
+
+.hero > div {
+    background-color: blue;
+    min-height: 675px;
+    position: relative;
+    padding: 15px;
+}
+
+.primary-content > div {
+    background-color: orange;
+    padding: 15px;
+}
+
+.featured-message > div {
+    background-color: red;
+    min-height: 325px;
+}
+
+.subject-tiles > div {
+    background-color: green;
+}
+
+footer > div {
+    background-color: grey;
+    padding: 15px;
+    overflow: hidden
+}
+
+/****************************************
+    Sub-layout
+*****************************************/
+
+header.primary-header {
+    background-color: magenta;
+    min-height: 125px;
+}
+
+.breakouts {
+    background-color: lime;
+    min-height: 250px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+}
+
+main {
+    overflow: hidden;
+}
+
+section.main-content {
+    min-height: 1000px;
+    &:first-child {
+        background-color: brown;
+        width: 50%;
+        float: left;
+    }
+    &:last-child {
+        background-color: yellow;
+        overflow: hidden;
+    }
+}
+
+
+.heading-tiles {
+    background-color: lime;
+    min-height: 125px;
+}
+
+.content-tiles {
+    background-color: blue;
+    min-height: 500px;
+}
+
+.subject-tiles a {
+    background-color: orange;
+    min-height: 125px;
+    display: block;
+}
+
+.footer-side {
+    min-height: 350px;
+    &:first-child {
+        background-color: black;
+        width: 50%;
+        float: left;
+    }
+    &:last-child {
+        background-color: yellow;
+    }
+}
+
+
+/****************************************
+    components
+*****************************************/
