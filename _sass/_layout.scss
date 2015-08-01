@@ -263,31 +263,40 @@ html {
     margin: auto;
 }
 
-.hero > div {
-    background-color: blue;
-    min-height: 675px;
-    position: relative;
-    padding: 15px;
+.hero {
+    background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/city_view.jpg');
+    background-size: cover;
+    > div {
+        // background-color: blue;
+        min-height: 675px;
+    }
 }
 
 .primary-content > div {
-    background-color: orange;
-    padding: 15px;
+    // background-color: orange;
 }
 
-.featured-message > div {
-    background-color: red;
-    min-height: 325px;
+.featured-message {
+    background: radial-gradient(rgba(176, 167, 167, 0.27), #000), url('../images/lighthouse.jpg');
+    background-size: cover;
+    > div {
+        // background-color: red;
+        min-height: 325px;
+    }
 }
 
-.subject-tiles > div {
-    background-color: green;
+.subject-tiles {
+    // background-color: green;
+    background-color: rgba(239, 239, 239, 1);
+
 }
 
-footer > div {
-    background-color: grey;
-    padding: 15px;
-    overflow: hidden
+.primary-footer {
+    background-color: black;
+    > div {
+        overflow: hidden;
+        color: white;
+    }
 }
 
 /****************************************
@@ -295,17 +304,14 @@ footer > div {
 *****************************************/
 
 header.primary-header {
-    background-color: magenta;
+    // background-color: magenta;
     min-height: 125px;
 }
 
 .breakouts {
-    background-color: lime;
-    min-height: 250px;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
+    // background-color: lime;
+    // padding: 15px;
+    background: radial-gradient(rgba(176, 167, 167, 0.27), #000)
 }
 
 main {
@@ -313,44 +319,50 @@ main {
 }
 
 section.main-content {
-    min-height: 1000px;
     &:first-child {
-        background-color: brown;
+        // background-color: brown;
         width: 50%;
         float: left;
     }
     &:last-child {
-        background-color: yellow;
+        // background-color: yellow;
         overflow: hidden;
     }
 }
 
 
 .heading-tiles {
-    background-color: lime;
+    // background-color: lime;
     min-height: 125px;
 }
 
 .content-tiles {
-    background-color: blue;
+    // background-color: blue;
     min-height: 500px;
 }
 
-.subject-tiles a {
-    background-color: orange;
-    min-height: 125px;
-    display: block;
+.subject-tiles {
+    text-align: center;
+    a {
+        // background-color: orange;
+        min-height: 90px;
+        display: inline-block;
+        font-size: 30px;
+        margin-top: 35px
+    }
 }
+
 
 .footer-side {
     min-height: 350px;
+    overflow: hidden;
     &:first-child {
-        background-color: black;
+        // background-color: grey;
         width: 50%;
         float: left;
     }
     &:last-child {
-        background-color: yellow;
+        // background-color: yellow;
     }
 }
 
@@ -358,3 +370,210 @@ section.main-content {
 /****************************************
     components
 *****************************************/
+
+.primary-header {
+    text-align: center;
+    position: relative;
+    a {
+        position: absolute;
+        left: 0;
+    }
+    div {
+        font-size: 50px;
+        margin: 0;
+        // padding: 20px;
+    }
+
+}
+
+.breakouts {
+    // background-color: pink;
+    overflow: hidden;
+    transform: translateY(-100px);
+}
+
+.breakout {
+    float: left;
+    width: 33.33%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    &:nth-child(1) {
+        background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/crafts.jpg');
+        background-size: 100% 100%;
+        // background-color: red;
+    }
+    &:nth-child(2) {
+        background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/giraffe.jpg');
+        background-size: 100% 100%;
+        // background-color: lime;
+        }
+    &:nth-child(3) {
+        background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/ship.jpg');
+        background-size: 100% 100%;
+        // background-color: aqua;
+    }
+    p {
+        font-size: 30px;
+        color: #fff;
+        margin: 0;
+        width: 300px;
+        // margin-top: 80px;
+        font-weight: bold;
+        position: absolute;
+        // transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
+        top: 75px;
+    }
+}
+
+.main-content {
+    p {
+        margin: 0;
+        &:first-child {
+            font-size: 35px;
+            font-family: Georgia, serif;
+            font-weight: 600;
+        }
+        &:last-child {
+            font-size: 14px;
+        }
+    }
+    .graphic {
+        background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/biker.jpg');
+        background-size: 100% 100%;
+        // background-color: chartreuse;
+        min-height: 500px;
+        width: 385px;
+    }
+
+    .graphic:last-child {
+        margin-left: 40px;
+        min-height: 400px;
+    }
+    .content {
+        // background-color: darkcyan;
+        min-height: 400px;
+        margin-top: 90px;
+    }
+}
+
+.main-content:last-child .content {
+    position: relative;
+    > div {
+        position: absolute;
+        bottom: 60px;
+    }
+}
+
+.featured-message .message {
+    margin-left: 50%;
+    width: 545px;
+    padding-top: 65px;
+    p {
+        margin: 0;
+        color: white;
+    }
+    p:nth-child(1) {
+        font-family: Georgia, serif;
+        font-size: 35px;
+    }
+    p:nth-child(2) {
+        margin-bottom: 15px;
+    }
+}
+
+.heading-tiles {
+    text-align: center;
+    font-size: 35px;
+    padding-top: 35px;
+    font-family: Georgia, serif;
+}
+
+.content-tiles .tile {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+    background-color: #fff;
+    margin-left: 20px;
+
+    .graphic {
+        // background-color: orange;
+        height: 225px;
+    }
+    .content {
+        // background-color: pink;
+        min-height: 275px;
+        p:nth-child(1) {
+            // background-color: gray;
+            margin: 0;
+            min-height: 70px;
+            font-size: 23px;
+            font-family: Georgia, serif;
+        }
+        p:nth-child(2) {
+            // background-color: lime;
+            margin: 0;
+            min-height: 155px;
+            font-size: 14px;
+        }
+        footer {
+            min-height: 50px;
+        }
+    }
+}
+
+// .content-tiles .graphic {
+//     &:nth-child(1) {
+//         background-image: url('../images/light-bulb.jpg');
+//         background-size: contain;
+//     }
+//     &:nth-child(2) {
+//         background-image: url('../images/ship.jpg');
+//         background-size: contain;
+//     }
+//     &:nth-child(3) {
+//         // background-image: url('../images/light-bulb.jpg');
+//         background-size: contain;
+//     }
+// }
+
+.footer-side:first-child{
+    > p {
+        display: inline-block;
+        margin-top: 45px;
+        font-size: 23px;
+        border-bottom: solid 2px white;
+    }
+
+    div p {
+        font-size: 23px;
+    }
+
+    div:nth-child(2) {
+        float: left;
+        // background-color: yellow;
+        margin-right: 75px;
+    }
+
+    div:nth-child(3) {
+        // background-color: white;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+    }
+}
+
+.footer-side:last-child > div {
+    // background-color: black;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    margin-top: 50px;
+}
+
