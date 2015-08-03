@@ -259,14 +259,25 @@ html {
 *****************************************/
 
 .panel > div {
-    width: 960px;
     margin: auto;
 }
 
-.hero {
-    background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/city_view.jpg');
-    background-size: cover;
+@media screen and (min-width: 990px) {
+    .panel > div {
+        width: 960px;
+    }
+}
 
+.hero {
+    // background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/city_view.jpg');
+    // background-size: cover;
+    > img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 530px;
+    }
     > div {
         min-height: 530px;
     }
@@ -346,7 +357,10 @@ section.main-content {
     position: relative;
     a {
         position: absolute;
-        left: 0;
+        top: 5px;
+        left: 10px;
+        color: black;
+        font-size: 40px;
     }
     p {
         font-family: 'Pacifico', cursive;
@@ -381,6 +395,7 @@ section.main-content {
         background-size: 100% 100%;
     }
     p {
+        font-weight: bold;
         font-size: 25px;
         color: #fff;
         margin: 0;
