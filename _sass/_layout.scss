@@ -269,17 +269,13 @@ html {
 }
 
 .hero {
-    // background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/city_view.jpg');
-    // background-size: cover;
+    background: radial-gradient(rgba(176, 167, 167, 0.27), #000), url('../images/city_view.jpg');
+    height: 45vw;
     > img {
         width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        max-height: 530px;
     }
     > div {
-        min-height: 530px;
+        position: relative;
     }
 
 }
@@ -308,15 +304,18 @@ main {
     overflow: hidden;
 }
 
-section.main-content {
-    &:first-child {
-        width: 50%;
-        float: left;
-    }
-    &:last-child {
-        overflow: hidden;
+@media screen and (min-width: 990px) {
+    section.main-content {
+        &:first-child {
+            width: 50%;
+            float: left;
+        }
+        &:last-child {
+            overflow: hidden;
+        }
     }
 }
+
 
 .content-tiles {
     min-height: 500px;
@@ -326,24 +325,39 @@ section.main-content {
     background-color: rgba(239, 239, 239, 1);
     text-align: center;
     a {
-        min-height: 90px;
         display: inline-block;
         font-size: 30px;
-        margin-top: 35px;
+        margin: 20px;
         text-decoration: none;
         color: black;
     }
+} 
+
+@media screen and (min-width: 990px) {
+    .subject-tiles {
+        background-color: rgba(239, 239, 239, 1);
+        text-align: center;
+        a {
+            min-height: 90px;
+            display: inline-block;
+            font-size: 30px;
+            margin-top: 35px;
+            text-decoration: none;
+            color: black;
+        }
+    } 
 }
 
-
-.footer-side {
-    min-height: 360px;
-    overflow: hidden;
-    &:first-child {
-        width: 50%;
-        float: left;
-    }
-    &:last-child {
+@media screen and (min-width: 990px) {
+    .footer-side {
+        min-height: 360px;
+        overflow: hidden;
+        &:first-child {
+            width: 50%;
+            float: left;
+        }
+        &:last-child {
+        }
     }
 }
 
@@ -354,7 +368,29 @@ section.main-content {
 
 .primary-header {
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    div {
+        position: relative;
+    }
+    a {
+        // position: absolute;
+        // top: 5px;
+        // left: 10px;
+        color: black;
+        font-size: 40px;
+    }
+    p {
+        font-family: 'Pacifico', cursive;
+        font-size: 50px;
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 990px) {
     a {
         position: absolute;
         top: 5px;
@@ -363,48 +399,61 @@ section.main-content {
         font-size: 40px;
     }
     p {
-        font-family: 'Pacifico', cursive;
-        font-size: 50px;
+        display: block;
     }
-
 }
 
 .breakouts {
-    background: radial-gradient(rgba(176, 167, 167, 0.27), #000);
     overflow: hidden;
-    transform: translateY(-100px);
     box-shadow: 0 0 20px -3px black;
 }
 
+@media screen and (min-width: 990px) {
+    .breakouts {
+        transform: translateY(-100px);
+    }
+}
+
 .breakout {
-    float: left;
-    width: 33.33%;
-    height: 200px;
     text-align: center;
-    position: relative;
-    &:nth-child(1) {
-        background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/crafts.jpg');
-        background-size: 100% 100%;
-    }
-    &:nth-child(2) {
-        background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/giraffe.jpg');
-        background-size: 100% 100%;
-        }
-    &:nth-child(3) {
-        background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/ship.jpg');
-        background-size: 100% 100%;
-    }
-    p {
+    width: 100%;
+    margin: auto;
+    padding: 1px;
+    background-color: black;
+    border-bottom: 1px solid;
+    > p {
+        display: inline-block;
+        padding: 10px;
+        margin: 5px 0 5px 0;
         font-weight: bold;
         font-size: 25px;
         color: #fff;
-        margin: 0;
         width: 300px;
-        position: absolute;
-        right: 50%;
-        transform: translateX(50%);
-        top: 75px;
         text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .breakout {
+        min-height: 100px;
+        width: 33.33%;
+        float: left;
+        height: 200px;
+        &:nth-child(1) {
+            background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/crafts.jpg');
+            background-size: 100% 100%;
+        }
+        &:nth-child(2) {
+            background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/giraffe.jpg');
+            background-size: 100% 100%;
+            }
+        &:nth-child(3) {
+            background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/ship.jpg');
+            background-size: 100% 100%;
+        }
+    }
+    > p {
+        margin: 85px 0 0 0;
     }
 }
 
@@ -419,33 +468,53 @@ section.main-content {
         &:last-child {
             font-family: 'Lato', sans-serif;
             font-size: 14px;
+            text-align: justify;
         }
     }
-
-    .graphic {
-        height: 500px;
-        width: 385px;
-    }
-    img {
-        box-shadow: 0 0 20px -3px black;
-    }
-    .graphic:last-child {
-        margin-left: 40px;
-        min-height: 400px;
-    }
     .content {
-        min-height: 365px;
-        margin-top: 90px;
+        padding: 30px;
+    }
+    .graphic {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .main-content {
+        .graphic {
+            display: initial;
+            height: 500px;
+            width: 385px;
+        }
+        img {
+            box-shadow: 0 0 20px -3px black;
+        }
+        .graphic:last-child {
+            margin-left: 40px;
+            min-height: 400px;
+        }
+        .content {
+            min-height: 365px;
+            margin-top: 90px;
+        }
     }
 }
 
 .main-content:last-child .content {
-    min-height: 400px;
-    margin: 0 0 55px 0;
+    padding: 30px;
+    min-height: 290px;
     position: relative;
     // background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/ship.jpg');
     background: radial-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 1)), url("../images/ship.jpg");
     background-size: 100% 100%;
+}
+
+@media screen and (min-width: 990px) {
+    .main-content:last-child .content {
+        margin: 0 0 30px 0;
+        min-height: 400px;
+        margin: 0 0 55px 0;
+    }
     > div {
         position: absolute;
         bottom: 0;
@@ -453,11 +522,10 @@ section.main-content {
 }
 
 .featured-message .message {
-    margin-left: 50%;
-    width: 500px;
-    padding-top: 65px;
+    padding: 20px 30px;
+    text-align: justify;
     p {
-        margin: 0;
+        margin: 0 0 15px 0;
         color: white;
         font-size: 15px;
     }
@@ -471,86 +539,76 @@ section.main-content {
     }
 }
 
+@media screen and (min-width: 990px) {
+    .featured-message .message {
+        margin-left: 50%;
+        padding-top: 65px;
+    }
+}
+
 .heading-tiles {
     text-align: center;
     font-size: 35px;
-    padding: 35px;
+    padding: 30px;
     font-weight: 700;
     font-family: 'Libre Baskerville', serif;
 }
 
+
 .content-tiles .tile {
-    width: 30%;
+    max-width: 315px;
     display: inline-block;
     text-align: left;
     background-color: #fff;
-    margin-left: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 0 10px -3px black;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     .graphic {
-        height: 225px;
+        max-height: 225px;
     }
     .content {
-        min-height: 275px;
+        min-height: 190px;
         padding: 0 10px;
         p:nth-child(1) {
             margin: 0;
-            height: 70px;
+            min-height: 70px;
             font-size: 20px;
             font-family: 'Libre Baskerville', serif;
         }
         p:nth-child(2) {
+            text-align: justify;
             margin: 0;
-            height: 155px;
+            min-height: 80px;
             font-size: 14px;
             font-family: 'Lato', sans-serif;
         }
         footer {
-            height: 50px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            max-height: 50px;
         }
     }
 }
 
-.footer-side:first-child{
-    font-family: 'Lato', sans-serif;
-    > p {
-        display: inline-block;
-        margin: 45px 0;
-        font-size: 18px;
-        border-bottom: solid 2px white;
-        text-transform: uppercase;
-    }
-
-    div p {
-        font-size: 21px;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-
-    div:nth-child(2) {
-        float: left;
-        margin-right: 75px;
-    }
-
-    div:nth-child(3) {
-        overflow: hidden;
-    }
-
-    a {
-        text-decoration: none;
-        display: block;
-        font-size: 13px;
-        color: white;
+@media screen and (min-width: 990px) {
+    .content-tiles .tile {
+        width: 30%;
+        margin-left: 20px;
     }
 }
 
+
+
+.footer-side:first-child {
+    display: none;
+}
+
 .footer-side:last-child > div {
-    // height: 150px;
-    // width: 150px;
-    // margin: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-top: 70px;
+    margin: 20px 0 20px 0;
     text-align: center;
     p {
         font-family: 'Pacifico', cursive;
@@ -560,6 +618,56 @@ section.main-content {
     i {
         font-size: 24px;
         margin-left:3px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .footer-side:first-child {
+        display: initial;
+        font-family: 'Lato', sans-serif;
+        > p {
+            display: inline-block;
+            margin: 45px 0;
+            font-size: 18px;
+            border-bottom: solid 2px white;
+            text-transform: uppercase;
+        }
+
+        div p {
+            font-size: 21px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        div:nth-child(2) {
+            float: left;
+            margin-right: 75px;
+        }
+
+        div:nth-child(3) {
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+            color: white;
+        }
+    }
+
+    .footer-side:last-child > div {
+        margin-top: 70px;
+        text-align: center;
+        p {
+            font-family: 'Pacifico', cursive;
+            font-size: 45px;
+        }
+
+        i {
+            font-size: 24px;
+            margin-left:3px;
+        }
     }
 }
 
