@@ -269,7 +269,8 @@ html {
 }
 
 .hero {
-    background: radial-gradient(rgba(176, 167, 167, 0.27), #000), url('../images/city_view.jpg');
+    background: radial-gradient(rgba(176, 167, 167, 0.27), #000), url('../images/city_view(2).jpg');
+    background-size: cover;
     height: 45vw;
     > img {
         width: 100%;
@@ -456,9 +457,9 @@ main {
             background: radial-gradient(transparent, rgba(0, 0, 0, 0.27)), url('../images/ship.jpg');
             background-size: 100% 100%;
         }
-    }
-    > p:first-child {
-        margin: 85px 0 0 0;
+        > p:first-child {
+            margin: 70px 0 0 0;
+        }
     }
 }
 
